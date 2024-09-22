@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Anek_Odia } from 'next/font/google';
-
+import Header from '@/components/header';
+import { ThemeProvider } from 'next-themes';
+import Footer from '@/components/footer';
 const anekOdia = Anek_Odia({
   subsets: ['latin'],
   weight: 'variable',
@@ -21,7 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anekOdia.variable} antialiased font-anek-odia`}>{children}</body>
+      <body className={`${anekOdia.variable} antialiased font-anek-odia`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          forcedTheme="light"
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
