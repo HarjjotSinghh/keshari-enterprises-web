@@ -43,9 +43,9 @@ export function IndustryRecognition() {
           viewport={{ once: true }}
         >
           <img
-            src="/placeholder.svg?height=150&width=250&text=Industry+Recognition"
+            src="https://static6.depositphotos.com/1000975/601/i/450/depositphotos_6017768-stock-photo-star-award-against-gradient-background.jpg"
             alt="Industry Recognition"
-            className="mx-auto rounded-lg shadow-lg aspect-video max-w-2xl object-cover"
+            className="mx-auto rounded-lg shadow-lg aspect-video md:max-w-2xl object-cover"
           />
         </motion.div>
       </div>

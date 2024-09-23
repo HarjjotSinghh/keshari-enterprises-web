@@ -77,9 +77,10 @@ export function WelcomeSection() {
                   </h3>
                 </div>
                 <img
-                  src="/placeholder.svg?height=150&width=250&text=Bearing+Selection"
+                  draggable={false}
+                  src="https://www.premierbearing.com/img/box1.jpg"
                   alt="Bearing Selection Wizard"
-                  className="w-full h-40 object-cover mb-4 rounded"
+                  className="w-full h-52 select-none object-cover mb-4 rounded"
                 />
                 <p className="text-sm text-gray-600">Find the perfect bearing for your needs</p>
               </CardContent>
@@ -100,9 +101,10 @@ export function WelcomeSection() {
                   <h3 className="lg:text-2xl text-xl mt-2 font-semibold">Locations</h3>
                 </div>
                 <img
-                  src="/placeholder.svg?height=150&width=250&text=Locations+Map"
+                  draggable={false}
+                  src="https://www.premierbearing.com/img/box2.jpg"
                   alt="Locations Map"
-                  className="w-full h-40 object-cover mb-4 rounded"
+                  className="w-full h-52 select-none object-cover mb-4 rounded"
                 />
                 <p className="text-sm text-gray-600">Find Keshari Enterprises near you</p>
               </CardContent>
@@ -137,9 +139,14 @@ export function WelcomeSection() {
                     {Array.from({ length: 5 }).map((_, index) => (
                       <CarouselItem key={index}>
                         <img
-                          src="/placeholder.svg?height=150&width=250&text=News+1"
+                          draggable={false}
+                          src={
+                            index % 2 === 0
+                              ? 'https://www.premierbearing.com/img/box2.jpg'
+                              : 'https://www.premierbearing.com/img/box1.jpg'
+                          }
                           alt="News 1"
-                          className="w-full h-40 object-cover mb-4 rounded"
+                          className="w-full h-52 select-none object-cover mb-4 rounded"
                         />
                       </CarouselItem>
                     ))}

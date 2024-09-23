@@ -14,30 +14,33 @@ export function CompanyHistory() {
         <motion.h2
           className="text-3xl font-bold mb-8 text-center"
           initial="hidden"
+          viewport={{ once: true }}
           whileInView="visible"
           variants={fadeInUp}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
           Our Journey Since 1988
         </motion.h2>
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           <motion.div
-            className="md:w-1/2 mb-8 md:mb-0"
+            className="mb-8 md:mb-0"
             initial="hidden"
+            viewport={{ once: true }}
             whileInView="visible"
             variants={fadeInUp}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.2 }}
           >
             <img
-              src="/placeholder.svg?height=150&width=250&text=Company+History"
+              src="/logo.png"
               alt="Keshari Enterprises History"
-              className="rounded-lg shadow-lg aspect-video object-cover"
+              className="rounded-lg aspect-square object-contain max-w-sm"
             />
           </motion.div>
           <motion.div
             className="md:w-1/2 md:pl-12"
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             variants={fadeInUp}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
           >

@@ -11,17 +11,18 @@ const teamMembers = [
   {
     name: 'John Doe',
     position: 'CEO',
-    image: '/placeholder.svg?height=150&width=250&text=John+Doe',
+    image: 'https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg',
   },
   {
     name: 'Jane Smith',
     position: 'COO',
-    image: '/placeholder.svg?height=150&width=250&text=Jane+Smith',
+    image:
+      'https://imgv3.fotor.com/images/ai-headshot-generator/headshot-of-a-female-in-black-and-white-suit-with-curly-bobbed-hair.jpg',
   },
   {
     name: 'Mike Johnson',
     position: 'Technical Director',
-    image: '/placeholder.svg?height=150&width=250&text=Mike+Johnson',
+    image: 'https://i.pinimg.com/736x/f8/66/8e/f8668e5328cfb4938903406948383cf6.jpg',
   },
 ];
 

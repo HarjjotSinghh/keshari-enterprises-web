@@ -152,10 +152,11 @@ export default function Header() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: (index + subIndex) * 0.1 }}
                                     viewport={{ once: true }}
+                                    className="text-left"
                                   >
                                     <Link
                                       href={subItem.href}
-                                      className="text-sm hover:underline"
+                                      className="text-sm hover:underline text-left"
                                       onClick={handleLinkClick}
                                     >
                                       {subItem.name}
@@ -168,7 +169,7 @@ export default function Header() {
                         ) : (
                           <Link
                             href={item.href}
-                            className="py-4 block hover:underline"
+                            className="py-4 block hover:underline text-left"
                             onClick={handleLinkClick}
                           >
                             {item.name}

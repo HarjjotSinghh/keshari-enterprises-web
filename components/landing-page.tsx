@@ -18,56 +18,110 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const products = {
   schaeffler: [
-    { name: 'Mechanical Bearings', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Lubrication', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Digital Services', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Linear Guides', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Condition Monitoring', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Maintenance Tools', image: '/placeholder.svg?height=200&width=200' },
+    {
+      name: 'Mechanical Bearings',
+      image: 'https://www.premierbearing.com/img/dodge/product-img1.jpg',
+    },
+    { name: 'Lubrication', image: 'https://www.premierbearing.com/img/homepage/product-img2.jpg' },
+    {
+      name: 'Digital Services',
+      image: 'https://www.premierbearing.com/img/homepage/product-img6.jpg',
+    },
+    {
+      name: 'Linear Guides',
+      image: 'https://www.premierbearing.com/img/homepage/product-img3.jpg',
+    },
+    {
+      name: 'Condition Monitoring',
+      image: 'https://www.premierbearing.com/img/homepage/product-img4.jpg',
+    },
+    {
+      name: 'Maintenance Tools',
+      image: 'https://www.premierbearing.com/img/homepage/product-img5.jpg',
+    },
   ],
   bonfiglioli: [
-    { name: 'Gear Units', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Gear Motors', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Electric Motors', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Inverters', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Servo Systems', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Planetary Gearboxes', image: '/placeholder.svg?height=200&width=200' },
+    {
+      name: 'Gear Units',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img7.jpg',
+    },
+    {
+      name: 'Gear Motors',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img8.jpg',
+    },
+    {
+      name: 'Electric Motors',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img9.jpg',
+    },
+    {
+      name: 'Inverters',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img10.jpg',
+    },
+    {
+      name: 'Servo Systems',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img11.jpg',
+    },
+    {
+      name: 'Planetary Gearboxes',
+      image: 'https://www.premierbearing.com/img/bonfiglioil/product-img12.jpg',
+    },
   ],
   dodge: [
-    { name: 'Mounted Bearings', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Enclosed Gearing', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Mechanical Power Transmission', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Couplings', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Conveyor Components', image: '/placeholder.svg?height=200&width=200' },
-    { name: 'Overload Clutches', image: '/placeholder.svg?height=200&width=200' },
+    {
+      name: 'Mounted Bearings',
+      image: 'https://www.premierbearing.com/img/dodge/product-img1.jpg',
+    },
+    {
+      name: 'Enclosed Gearing',
+      image: 'https://www.premierbearing.com/img/dodge/product-img2.jpg',
+    },
+    {
+      name: 'Mechanical Power Transmission',
+      image: 'https://www.premierbearing.com/img/dodge/product-img3.jpg',
+    },
+    { name: 'Couplings', image: 'https://www.premierbearing.com/img/dodge/product-img1.jpg' },
+    {
+      name: 'Conveyor Components',
+      image: 'https://www.premierbearing.com/img/dodge/product-img2.jpg',
+    },
+    {
+      name: 'Overload Clutches',
+      image: 'https://www.premierbearing.com/img/dodge/product-img3.jpg',
+    },
   ],
 };
 
 const industrySolutions = {
   schaeffler: [
-    { name: 'Mining and Processing', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Wind Power', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Railway', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Automotive', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Aerospace', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Industrial Automation', image: '/placeholder.svg?height=200&width=300' },
+    {
+      name: 'Mining and Processing',
+      image: 'https://www.premierbearing.com/img/home/old/in-1.jpg',
+    },
+    { name: 'Wind Power', image: 'https://www.premierbearing.com/img/home/old/in-2.jpg' },
+    { name: 'Railway', image: 'https://www.premierbearing.com/img/home/old/in-3.jpg' },
+    { name: 'Automotive', image: 'https://www.premierbearing.com/img/home/old/in-4.jpg' },
+    { name: 'Aerospace', image: 'https://www.premierbearing.com/img/home/old/in-5.jpg' },
+    {
+      name: 'Industrial Automation',
+      image: 'https://www.premierbearing.com/img/home/old/in-6.jpg',
+    },
   ],
   bonfiglioli: [
-    { name: 'Food & Beverage', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Intralogistics', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Logistics', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Renewable Energy', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Construction', image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Agriculture', image: '/placeholder.svg?height=200&width=300' },
+    { name: 'Food & Beverage', image: 'https://www.premierbearing.com/img/home/old/in-7.jpg' },
+    { name: 'Intralogistics', image: 'https://www.premierbearing.com/img/home/old/in-8.jpg' },
+    { name: 'Logistics', image: 'https://www.premierbearing.com/img/home/old/in-9.jpg' },
+    { name: 'Renewable Energy', image: 'https://www.premierbearing.com/img/home/old/in-10.jpg' },
+    { name: 'Construction', image: 'https://www.premierbearing.com/img/home/old/in-11.jpg' },
+    { name: 'Agriculture', image: 'https://www.premierbearing.com/img/home/old/in-12.jpg' },
   ],
 };
 
 const clientLogos = [
-  '/placeholder.svg?height=50&width=100',
-  '/placeholder.svg?height=50&width=100',
-  '/placeholder.svg?height=50&width=100',
-  '/placeholder.svg?height=50&width=100',
-  '/placeholder.svg?height=50&width=100',
+  'https://img.logoipsum.com/332.svg',
+  'https://img.logoipsum.com/330.svg',
+  'https://img.logoipsum.com/329.svg',
+  'https://img.logoipsum.com/317.svg',
+  'https://img.logoipsum.com/297.svg',
 ];
 
 const fadeInUp = {
@@ -123,7 +177,7 @@ function ProductCarousel({
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-full h-40 object-cover mb-4"
+                          className="w-full h-full  object-cover mb-6"
                         />
                       </CardHeader>
                       <CardContent className="flex flex-row justify-between items-center p-6 pt-0">
@@ -147,16 +201,24 @@ function ProductCarousel({
 function HeroCarousel() {
   const heroSlides = [
     {
-      image: '/placeholder.svg?height=500&width=1200&text=Hero 1',
+      image: 'https://www.premierbearing.com/img/slides/banner1.webp',
       title: 'Bringing World-Class Solutions',
     },
     {
-      image: '/placeholder.svg?height=500&width=1200&text=Hero 2',
+      image: 'https://www.premierbearing.com/img/slides/banner2.webp',
       title: 'Sourced From Global Leaders',
     },
     {
-      image: '/placeholder.svg?height=500&width=1200&text=Hero 3',
+      image: 'https://www.premierbearing.com/img/slides/banner3.webp',
       title: 'Innovative Industrial Solutions',
+    },
+    {
+      image: 'https://www.premierbearing.com/img/slides/banner4.webp',
+      title: 'Premium Bearing Solutions',
+    },
+    {
+      image: 'https://www.premierbearing.com/img/slides/banner5.webp',
+      title: 'Customized Industrial Solutions',
     },
   ];
 
@@ -176,13 +238,13 @@ function HeroCarousel() {
       <CarouselContent>
         {heroSlides.map((slide, index) => (
           <CarouselItem key={index}>
-            <div className="relative h-[500px]">
+            <div className="relative">
               <img
                 src={slide.image}
                 alt={`Hero Slide ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50 lg:px-24 px-16 ">
+              {/* <div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50 lg:px-24 px-16 ">
                 <motion.h1
                   className="text-4xl font-bold text-white text-left w-full mx-auto max-w-7xl"
                   initial="hidden"
@@ -193,13 +255,13 @@ function HeroCarousel() {
                 >
                   {slide.title}
                 </motion.h1>
-              </div>
+              </div> */}
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="absolute top-1/2 left-4 transform -translate-y-1/2" />
-      <CarouselNext className="absolute top-1/2 right-4 transform -translate-y-1/2" />
+      <CarouselPrevious className="absolute top-1/2 left-2 transform -translate-y-1/2" />
+      <CarouselNext className="absolute top-1/2 right-2 transform -translate-y-1/2" />
     </Carousel>
   );
 }
@@ -372,14 +434,14 @@ export function LandingPage() {
                       <img
                         src={logo}
                         alt={`Client Logo ${index + 1}`}
-                        className="h-60 w-60 mx-auto rounded-xl"
+                        className="h-16 w-auto mx-auto rounded-xl"
                       />
                     </motion.div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute top-1/2 left-4 transform -translate-y-1/2" />
-              <CarouselNext className="absolute top-1/2 right-4 transform -translate-y-1/2" />
+              <CarouselPrevious className="absolute top-1/2 left-2 transform -translate-y-1/2" />
+              <CarouselNext className="absolute top-1/2 right-2 transform -translate-y-1/2" />
             </Carousel>
           </div>
         </section>

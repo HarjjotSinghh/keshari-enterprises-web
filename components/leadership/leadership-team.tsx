@@ -6,19 +6,20 @@ const leaders = [
   {
     name: 'John Doe',
     position: 'CEO',
-    image: '/placeholder.svg?height=150&width=150',
+    image: 'https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg',
     bio: 'John has over 25 years of experience in the industrial parts industry and has been leading Keshari Enterprises since 2005.',
   },
   {
     name: 'Jane Smith',
     position: 'COO',
-    image: '/placeholder.svg?height=150&width=150',
+    image:
+      'https://imgv3.fotor.com/images/ai-headshot-generator/headshot-of-a-female-in-black-and-white-suit-with-curly-bobbed-hair.jpg',
     bio: 'Jane brings 20 years of operational expertise to Keshari Enterprises, ensuring smooth and efficient business processes.',
   },
   {
     name: 'Mike Johnson',
     position: 'Technical Director',
-    image: '/placeholder.svg?height=150&width=150',
+    image: 'https://i.pinimg.com/736x/f8/66/8e/f8668e5328cfb4938903406948383cf6.jpg',
     bio: 'With a Ph.D. in Mechanical Engineering, Mike leads our technical team in providing cutting-edge solutions to our clients.',
   },
 ];
