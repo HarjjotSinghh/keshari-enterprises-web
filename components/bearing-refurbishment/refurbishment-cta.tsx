@@ -21,7 +21,7 @@ export function RefurbishmentCTA() {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           viewport={{ once: true }}
         >
-          Ready to Breathe New Life into Your Bearings?
+          Renew, Reuse, Revive – Expert Bearing Refurbishment Services
         </motion.h2>
         <motion.p
           className="mb-8 text-xl max-w-2xl mx-auto"
@@ -31,8 +31,8 @@ export function RefurbishmentCTA() {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           viewport={{ once: true }}
         >
-          Contact us today to learn more about our bearing refurbishment services and how we can
-          help you reduce costs and improve efficiency.
+          Why discard when you can refurbish? Our expert technicians use state-of-the-art techniques
+          to restore your bearings to their original glory, saving you both time and money.
         </motion.p>
         <Link href="/enquiry">
           <motion.div

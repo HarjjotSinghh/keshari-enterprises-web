@@ -51,7 +51,7 @@ export function AboutUsPreview() {
               transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Your Partner in Every Revolution
+              Your Partner in Every Revolution – Since 1988
             </motion.h2>
             <motion.p
               className="mb-6"

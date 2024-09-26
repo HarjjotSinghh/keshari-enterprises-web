@@ -30,7 +30,7 @@ export function WelcomeSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
-            Welcome to Keshari Enterprises
+            Welcome to Keshari Enterprises – Precision in Every Spin!
           </motion.h2>
           <motion.p
             className="mb-4 max-w-2xl"
@@ -39,10 +39,10 @@ export function WelcomeSection() {
             variants={fadeInUp}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
           >
-            India&apos;s top industrial bearing distributor and No. 1 authorised industrial
-            distributor of Schaeffler. Founded in 1975, Keshari Enterprises has steadfastly grown
-            for more than 40 years now, delivering unmatched industry solutions and customer service
-            across the country.
+            Ever pondered the sheer importance of rotation in our daily lives? From the clock
+            ticking on your wall to the powerful machinery in factories, our world thrives on
+            seamless, reliable motion. At Keshari Enterprises, we are the silent force behind this
+            movement, ensuring that every component turns with precision and reliability.
           </motion.p>
           <motion.p
             className="max-w-2xl"
@@ -51,10 +51,10 @@ export function WelcomeSection() {
             variants={fadeInUp}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}
           >
-            Our vast experience in various industries has allowed us to evolve from mere product
-            distributors to solution providers. Our speed, scalability and consistency to deliver
-            superior results enabled us to develop a vast network across the country, becoming the
-            most reputed bearing supplier in India in a very short span.
+            For over three decades, we have been the trusted partner for industries across India,
+            offering world-class bearings and industrial solutions. As authorized distributors of
+            leading brands like Schaeffler (FAG & INA), NBC, and RMP, we bring to you the best of
+            quality, performance, and innovation. Our mission is simple: To keep your world moving.
           </motion.p>
         </div>
       </div>

@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     title: 'Thorough Inspections',
-    description: 'We identify wear and tear, corrosion, or damage.',
+    description: 'Identifying wear and tear, corrosion, or damage.',
   },
   {
     title: 'Precision Repairs',
-    description: 'Our experts restore bearings to their optimal condition.',
+    description: 'Restoring bearings to their optimal condition.',
   },
   {
     title: 'Advanced Diagnostics',
-    description: 'We ensure long-term reliability and performance.',
+    description: 'Ensuring long-term reliability and performance.',
   },
   {
     title: 'Complete Overhauls',
-    description: 'We rejuvenate bearings to meet or exceed original specifications.',
+    description: 'Rejuvenating bearings to meet or exceed original specifications.',
   },
 ];
 
@@ -53,7 +53,7 @@ export function RefurbishmentProcess() {
               transition={{
                 duration: 0.5,
                 ease: 'easeInOut',
-                delay: index * 0.5, // Staggered animation based on index
+                delay: index * 0.5,
               }}
             >
               <div className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">

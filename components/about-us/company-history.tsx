@@ -19,7 +19,7 @@ export function CompanyHistory() {
           variants={fadeInUp}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
-          Our Journey Since 1988
+          Your Partner in Every Revolution – Since 1988
         </motion.h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           <motion.div

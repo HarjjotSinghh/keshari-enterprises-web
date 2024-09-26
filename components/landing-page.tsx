@@ -116,13 +116,13 @@ const industrySolutions = {
   ],
 };
 
-const clientLogos = [
-  'https://img.logoipsum.com/332.svg',
-  'https://img.logoipsum.com/330.svg',
-  'https://img.logoipsum.com/329.svg',
-  'https://img.logoipsum.com/317.svg',
-  'https://img.logoipsum.com/297.svg',
-];
+// const clientLogos = [
+//   'https://img.logoipsum.com/332.svg',
+//   'https://img.logoipsum.com/330.svg',
+//   'https://img.logoipsum.com/329.svg',
+//   'https://img.logoipsum.com/317.svg',
+//   'https://img.logoipsum.com/297.svg',
+// ];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -392,57 +392,6 @@ export function LandingPage() {
               Testimonials
             </motion.h2>
             <TestimonialCarousel />
-          </div>
-        </section>
-
-        {/* Clientele Section */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              className="text-5xl font-bold mb-8 text-center"
-              initial="hidden"
-              viewport={{ once: true }}
-              whileInView="visible"
-              variants={fadeInUp}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              Our Clientele
-            </motion.h2>
-            <Carousel
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                }),
-              ]}
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              className="w-full max-w-3xl mx-auto"
-            >
-              <CarouselContent>
-                {clientLogos.map((logo, index) => (
-                  <CarouselItem key={index} className="basis-1/2 md:basis-1/3">
-                    <motion.div
-                      initial="hidden"
-                      viewport={{ once: true }}
-                      whileInView="visible"
-                      variants={fadeInUp}
-                      transition={{ duration: 0.5, ease: 'easeInOut' }}
-                      className="p-1"
-                    >
-                      <img
-                        src={logo}
-                        alt={`Client Logo ${index + 1}`}
-                        className="h-16 w-auto mx-auto rounded-xl"
-                      />
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="absolute top-1/2 left-2 transform -translate-y-1/2" />
-              <CarouselNext className="absolute top-1/2 right-2 transform -translate-y-1/2" />
-            </Carousel>
           </div>
         </section>
       </main>
