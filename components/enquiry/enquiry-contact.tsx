@@ -13,7 +13,7 @@ export function EnquiryContact() {
     <section className="py-16">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
-          className="text-3xl font-bold mb-8"
+          className="text-3xl font-extrabold mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

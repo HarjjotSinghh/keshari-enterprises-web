@@ -20,10 +20,10 @@ const fadeInUp = {
 export function WelcomeSection() {
   return (
     <section className="">
-      <div className="bg-primary text-white py-16">
+      <div className="bg-gradient-to-b from-primary to-100% from-50% to-primary/80 text-white py-16">
         <div className="mx-auto px-4 max-w-7xl">
           <motion.h2
-            className="text-4xl font-bold mb-4"
+            className="text-4xl font-bold mb-4 text-pretty"
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
@@ -72,9 +72,7 @@ export function WelcomeSection() {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Wand2 className="w-6 h-6 mr-2 text-primary" />
-                  <h3 className="lg:text-2xl text-xl mt-2 font-semibold">
-                    Bearing Selection Wizard
-                  </h3>
+                  <h3 className="lg:text-xl text-lg font-semibold">Bearing Selection Wizard</h3>
                 </div>
                 <img
                   draggable={false}
@@ -98,7 +96,7 @@ export function WelcomeSection() {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <MapPin className="w-6 h-6 mr-2 text-primary" />
-                  <h3 className="lg:text-2xl text-xl mt-2 font-semibold">Locations</h3>
+                  <h3 className="lg:text-xl text-lg font-semibold">Locations</h3>
                 </div>
                 <img
                   draggable={false}
@@ -122,7 +120,7 @@ export function WelcomeSection() {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Newspaper className="w-6 h-6 mr-2 text-primary" />
-                  <h3 className="lg:text-2xl text-xl mt-2 font-semibold">News & Events</h3>
+                  <h3 className="lg:text-xl text-lg font-semibold">News & Events</h3>
                 </div>
                 <Carousel
                   opts={{

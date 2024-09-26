@@ -28,7 +28,7 @@ export function LeadershipTeam() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-extrabold mb-8 text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

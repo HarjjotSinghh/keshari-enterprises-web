@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Anek_Odia } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import Header from '@/components/header';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/footer';
-const anekOdia = Anek_Odia({
+
+const anekOdia = Playfair_Display({
   subsets: ['latin'],
   weight: 'variable',
   variable: '--font-anek-odia',

@@ -32,10 +32,10 @@ const fadeInUp = {
 
 export function CoreValuesSection() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-primary/[0.03]">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"
           viewport={{ once: true }}
           whileInView="visible"

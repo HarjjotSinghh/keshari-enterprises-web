@@ -32,10 +32,10 @@ const faqs = [
 
 export function EnquiryFAQ() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-primary/[0.03]">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-3xl font-extrabold mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}

@@ -12,7 +12,7 @@ export function VisionSection() {
     <section className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}

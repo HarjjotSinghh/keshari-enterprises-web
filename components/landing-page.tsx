@@ -13,8 +13,8 @@ import {
 import { ChevronRightCircle } from 'lucide-react';
 import { WelcomeSection } from './welcome-section';
 import Link from 'next/link';
-import ContactForm from './contact-form';
 import Autoplay from 'embla-carousel-autoplay';
+import { cn } from '@/lib/utils';
 
 const products = {
   schaeffler: [
@@ -132,15 +132,17 @@ const fadeInUp = {
 function ProductCarousel({
   items,
   title,
+  className,
 }: {
   items: { name: string; image: string }[];
   title: string;
+  className?: string;
 }) {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className={cn('py-16 bg-gray-50', className)}>
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-5xl font-bold mb-8 text-center uppercase"
+          className="md:text-4xl text-3xl font-extrabold mb-4 text-center"
           initial="hidden"
           viewport={{ once: true }}
           whileInView="visible"
@@ -246,7 +248,7 @@ function HeroCarousel() {
               />
               {/* <div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50 lg:px-24 px-16 ">
                 <motion.h1
-                  className="text-4xl font-bold text-white text-left w-full mx-auto max-w-7xl"
+                  className="text-xl font-extrabold text-white text-left w-full mx-auto max-w-7xl"
                   initial="hidden"
                   viewport={{ once: true }}
                   whileInView="visible"
@@ -269,16 +271,16 @@ function HeroCarousel() {
 function TestimonialCarousel() {
   const testimonials = [
     {
-      text: 'Keshari Enterprises is a testament to an excellent partner in providing reliable supplies and service.',
-      author: 'Happy Customer 1',
+      text: 'Keshari Enterprises has been our go-to supplier for bearings for over a decade. Their quality products and exceptional service have significantly improved our operations.',
+      author: 'John Doe, Manufacturing Manager at XYZ Industries',
     },
     {
-      text: 'Their expertise and product range have significantly improved our operations.',
-      author: 'Satisfied Client 2',
+      text: "The expertise of Keshari Enterprises in providing custom solutions for our specialized machinery has been invaluable. Their team's knowledge and support are unmatched.",
+      author: 'Jane Smith, Chief Engineer at ABC Textiles',
     },
     {
-      text: 'Exceptional service and top-quality products make Keshari Enterprises our go-to supplier.',
-      author: 'Loyal Customer 3',
+      text: "We've seen a notable reduction in downtime since switching to Keshari Enterprises for our bearing needs. Their products are reliable, and their maintenance services are top-notch.",
+      author: 'Mike Johnson, Operations Director at DEF Steel',
     },
   ];
 
@@ -308,7 +310,7 @@ function TestimonialCarousel() {
               <Card>
                 <CardContent className="flex flex-col items-center p-6">
                   <blockquote className="text-center">
-                    <p className="text-lg mb-4 text-pretty">&quot;{testimonial.text}&quot;</p>
+                    <p className="text-base mb-4 text-pretty">&quot;{testimonial.text}&quot;</p>
                     <cite className="">- {testimonial.author}</cite>
                   </blockquote>
                 </CardContent>
@@ -326,9 +328,9 @@ function TestimonialCarousel() {
 export function LandingPage() {
   return (
     <div className="min-h-screen">
-      <main className="pb-24">
+      <main className="">
         {/* Hero Section */}
-        <section className="relative bg-gray-100">
+        <section className="relative bg-primary/[0.03]">
           <HeroCarousel />
         </section>
         <section>
@@ -336,25 +338,34 @@ export function LandingPage() {
         </section>
 
         {/* Products Sections */}
-        <ProductCarousel items={products.schaeffler} title="SCHAEFFLER PRODUCTS" />
-        <ProductCarousel items={products.bonfiglioli} title="BONFIGLIOLI PRODUCTS" />
-        <ProductCarousel items={products.dodge} title="DODGE PRODUCTS" />
+        <ProductCarousel
+          className="bg-primary/[0.03]"
+          items={products.schaeffler}
+          title="Schaeffler Products"
+        />
+        <ProductCarousel items={products.bonfiglioli} title="Bonfiglioli Products" />
+        <ProductCarousel
+          className="bg-primary/[0.03]"
+          items={products.dodge}
+          title="Dodge Products"
+        />
 
         {/* Industry Solutions Sections */}
         <ProductCarousel
           items={industrySolutions.schaeffler}
-          title="SCHAEFFLER INDUSTRY SOLUTIONS"
+          title="Schaeffler Industry Solutions"
         />
         <ProductCarousel
           items={industrySolutions.bonfiglioli}
-          title="BONFIGLIOLI INDUSTRY SOLUTIONS"
+          className="bg-primary/[0.03]"
+          title="Bonfiglioli Industry Solutions"
         />
 
         {/* Corporate Video Section */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.h2
-              className="text-5xl font-bold text-center mb-8"
+              className="md:text-4xl text-3xl font-extrabold text-center mb-8"
               initial="hidden"
               viewport={{ once: true }}
               whileInView="visible"
@@ -379,10 +390,10 @@ export function LandingPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-12 bg-white">
+        <section className="py-16 bg-primary/[0.03]">
           <div className="container mx-auto px-4">
             <motion.h2
-              className="text-5xl font-bold mb-8 text-center"
+              className="md:text-4xl text-3xl font-extrabold mb-8 text-center"
               initial="hidden"
               viewport={{ once: true }}
               whileInView="visible"
@@ -395,7 +406,7 @@ export function LandingPage() {
           </div>
         </section>
       </main>
-      <ContactForm />
+      {/* <ContactForm /> */}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function ContactForm() {
   return (
     <div className="bg-gray-700 px-8 py-16 w-full">
       <motion.h2
-        className="text-white text-center text-4xl mb-6"
+        className="text-white text-center text-3xl mb-6"
         initial="hidden"
         whileInView="animate"
         variants={fadeInUp}

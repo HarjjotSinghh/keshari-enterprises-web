@@ -25,15 +25,15 @@ const menuItems = [
     subItems: [
       {
         name: 'Schaeffler',
-        href: '/',
+        href: 'https://medias.schaeffler.co.in/',
       },
       {
         name: 'Bonfiglioli',
-        href: '/',
+        href: 'https://www.bonfiglioli.com/india/en/',
       },
       {
         name: 'Dodge Industrial',
-        href: '/',
+        href: 'https://dodgeindustrial.com/',
       },
     ],
   },
@@ -101,7 +101,7 @@ export default function Header() {
       >
         <Link href="/" className="flex flex-row items-center justify-center gap-2">
           <img src="/logo.png" alt="Keshari Enterprises Logo" className="h-16" />
-          <h2 className="md:text-3xl font-semibold text-2xl mt-2">Keshari Enterprises</h2>
+          <h2 className="md:text-xl font-semibold text-xl ">Keshari Enterprises</h2>
         </Link>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -126,7 +126,7 @@ export default function Header() {
                     height={64}
                     className="h-16 w-auto"
                   />
-                  <h2 className="md:text-2xl mt-2 font-semibold text-lg">Keshari Enterprises</h2>
+                  <h2 className="md:text-xl font-semibold text-base">Keshari Enterprises</h2>
                 </motion.div>
               </SheetTitle>
               <SheetDescription>
