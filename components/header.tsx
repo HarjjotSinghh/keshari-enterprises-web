@@ -28,12 +28,12 @@ const menuItems = [
         href: 'https://medias.schaeffler.co.in/',
       },
       {
-        name: 'Bonfiglioli',
-        href: 'https://www.bonfiglioli.com/india/en/',
+        name: 'NBC',
+        href: 'https://www.nbcbearings.com/',
       },
       {
-        name: 'Dodge Industrial',
-        href: 'https://dodgeindustrial.com/',
+        name: 'RMP',
+        href: 'https://rmpbearings.com/',
       },
     ],
   },

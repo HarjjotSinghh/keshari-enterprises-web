@@ -203,24 +203,20 @@ function ProductCarousel({
 function HeroCarousel() {
   const heroSlides = [
     {
-      image: 'https://www.premierbearing.com/img/slides/banner1.webp',
+      image: '/image1.jpg',
       title: 'Bringing World-Class Solutions',
     },
     {
-      image: 'https://www.premierbearing.com/img/slides/banner2.webp',
+      image: '/image2.jpg',
       title: 'Sourced From Global Leaders',
     },
     {
-      image: 'https://www.premierbearing.com/img/slides/banner3.webp',
+      image: '/image3.jpg',
       title: 'Innovative Industrial Solutions',
     },
     {
-      image: 'https://www.premierbearing.com/img/slides/banner4.webp',
-      title: 'Premium Bearing Solutions',
-    },
-    {
-      image: 'https://www.premierbearing.com/img/slides/banner5.webp',
-      title: 'Customized Industrial Solutions',
+      image: '/image4.jpg',
+      title: 'Keshari Enterprises',
     },
   ];
 
@@ -237,18 +233,18 @@ function HeroCarousel() {
       }}
       className="w-full"
     >
-      <CarouselContent>
+      <CarouselContent className="-ml-0">
         {heroSlides.map((slide, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="-pl-0.5">
             <div className="relative">
               <img
                 src={slide.image}
                 alt={`Hero Slide ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover aspect-[16/7]"
               />
-              {/* <div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50 lg:px-24 px-16 ">
+              <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-primary to-90% lg:px-24 px-16 ">
                 <motion.h1
-                  className="text-xl font-extrabold text-white text-left w-full mx-auto max-w-7xl"
+                  className="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-extrabold text-white text-left w-full mr-auto sm:mb-16 mb-4 max-w-7xl"
                   initial="hidden"
                   viewport={{ once: true }}
                   whileInView="visible"
@@ -257,7 +253,7 @@ function HeroCarousel() {
                 >
                   {slide.title}
                 </motion.h1>
-              </div> */}
+              </div>
             </div>
           </CarouselItem>
         ))}
@@ -343,11 +339,11 @@ export function LandingPage() {
           items={products.schaeffler}
           title="Schaeffler Products"
         />
-        <ProductCarousel items={products.bonfiglioli} title="Bonfiglioli Products" />
+        <ProductCarousel items={products.bonfiglioli} title="NBC Products" />
         <ProductCarousel
           className="bg-primary/[0.03]"
           items={products.dodge}
-          title="Dodge Products"
+          title="RMP Products"
         />
 
         {/* Industry Solutions Sections */}
