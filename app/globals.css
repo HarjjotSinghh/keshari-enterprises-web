@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .size-icon {
+    @apply w-6 h-6 min-w-6 min-h-6;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -13,7 +19,7 @@
     --popover: 0 0% 98%;
     --popover-foreground: 210 8% 5%;
 
-    --primary: 206 75% 38%;
+    --primary: 205 57% 43%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 7% 94%;

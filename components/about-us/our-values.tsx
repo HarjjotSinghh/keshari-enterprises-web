@@ -33,7 +33,7 @@ const fadeInUp = {
 export function OurValues() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.h2
           className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"

@@ -11,7 +11,7 @@ const fadeInUp = {
 export function ServiceOverview() {
   return (
     <section className="py-16 bg-primary/[0.03]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.h2
           className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"

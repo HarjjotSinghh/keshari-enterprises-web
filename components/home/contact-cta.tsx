@@ -12,7 +12,7 @@ const fadeInUp = {
 export function ContactCTA() {
   return (
     <section className="bg-primary text-white py-16">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto lg:px-8 px-6 text-center">
         <motion.h2
           className="text-3xl font-extrabold mb-4"
           initial="hidden"

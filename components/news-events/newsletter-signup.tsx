@@ -11,7 +11,7 @@ const fadeInUp = {
 export function NewsletterSignup() {
   return (
     <section className="py-16 bg-primary text-white">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto lg:px-8 px-6 text-center">
         <motion.h2
           className="text-3xl font-extrabold mb-4"
           initial="hidden"
@@ -44,7 +44,7 @@ export function NewsletterSignup() {
           <motion.input
             type="email"
             placeholder="Enter your email"
-            className="px-4 py-2 rounded-md w-full md:w-64 text-black"
+            className="lg:px-8 px-6 py-2 rounded-md w-full md:w-64 text-black"
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}

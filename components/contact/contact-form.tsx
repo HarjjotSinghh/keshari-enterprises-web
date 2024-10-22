@@ -11,7 +11,7 @@ const fadeInUp = {
 export function ContactForm() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.h2
           className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"
@@ -47,14 +47,14 @@ export function ContactForm() {
                 <input
                   type={field === 'email' ? 'email' : 'text'}
                   id={field}
-                  className="w-full px-4 py-2 rounded-md border border-gray-300"
+                  className="w-full lg:px-8 px-6 py-2 rounded-md border border-gray-300"
                   required
                 />
               ) : (
                 <textarea
                   id={field}
                   rows={4}
-                  className="w-full px-4 py-2 rounded-md border border-gray-300"
+                  className="w-full lg:px-8 px-6 py-2 rounded-md border border-gray-300"
                   required
                 ></textarea>
               )}

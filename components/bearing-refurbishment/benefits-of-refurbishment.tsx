@@ -2,21 +2,25 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-
+import { Icon } from '@iconify/react';
 const benefits = [
   {
+    icon: <Icon icon="fluent-mdl2:savings" className="size-icon" />,
     title: 'Cost Savings',
     description: 'Refurbishment can be significantly cheaper than purchasing new bearings.',
   },
   {
+    icon: <Icon className="size-icon" icon="material-symbols:hourglass-bottom-rounded" />,
     title: 'Extended Lifespan',
     description: 'Properly refurbished bearings can last as long as new ones.',
   },
   {
+    icon: <Icon icon="ic:twotone-wifi-tethering-error-rounded" className="size-icon" />,
     title: 'Reduced Downtime',
     description: 'Quick turnaround times mean less disruption to your operations.',
   },
   {
+    icon: <Icon className="size-icon" icon="material-symbols:eco-rounded" />,
     title: 'Environmentally Friendly',
     description: 'Refurbishment reduces waste and conserves resources.',
   },
@@ -30,7 +34,7 @@ const fadeInUp = {
 export function BenefitsOfRefurbishment() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.h2
           className="text-3xl font-extrabold mb-8 text-center"
           initial="hidden"
@@ -57,7 +61,10 @@ export function BenefitsOfRefurbishment() {
             >
               <Card>
                 <CardHeader>
-                  <CardTitle>{benefit.title}</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    {benefit.icon}
+                    {benefit.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>{benefit.description}</p>

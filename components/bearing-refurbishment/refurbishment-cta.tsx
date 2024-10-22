@@ -12,7 +12,7 @@ const fadeInUp = {
 export function RefurbishmentCTA() {
   return (
     <section className="py-16 bg-primary text-white">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto lg:px-8 px-6 text-center">
         <motion.h2
           className="text-3xl font-extrabold mb-4"
           initial="hidden"
@@ -21,7 +21,8 @@ export function RefurbishmentCTA() {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           viewport={{ once: true }}
         >
-          Renew, Reuse, Revive – Expert Bearing Refurbishment Services
+          Renew, Reuse, Revive <br />
+          Expert Bearing Refurbishment Services
         </motion.h2>
         <motion.p
           className="mb-8 text-xl max-w-2xl mx-auto"

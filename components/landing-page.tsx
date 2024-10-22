@@ -15,6 +15,7 @@ import { WelcomeSection } from './welcome-section';
 import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const products = {
   schaeffler: [
@@ -91,30 +92,30 @@ const products = {
   ],
 };
 
-const industrySolutions = {
-  schaeffler: [
-    {
-      name: 'Mining and Processing',
-      image: 'https://www.premierbearing.com/img/home/old/in-1.jpg',
-    },
-    { name: 'Wind Power', image: 'https://www.premierbearing.com/img/home/old/in-2.jpg' },
-    { name: 'Railway', image: 'https://www.premierbearing.com/img/home/old/in-3.jpg' },
-    { name: 'Automotive', image: 'https://www.premierbearing.com/img/home/old/in-4.jpg' },
-    { name: 'Aerospace', image: 'https://www.premierbearing.com/img/home/old/in-5.jpg' },
-    {
-      name: 'Industrial Automation',
-      image: 'https://www.premierbearing.com/img/home/old/in-6.jpg',
-    },
-  ],
-  bonfiglioli: [
-    { name: 'Food & Beverage', image: 'https://www.premierbearing.com/img/home/old/in-7.jpg' },
-    { name: 'Intralogistics', image: 'https://www.premierbearing.com/img/home/old/in-8.jpg' },
-    { name: 'Logistics', image: 'https://www.premierbearing.com/img/home/old/in-9.jpg' },
-    { name: 'Renewable Energy', image: 'https://www.premierbearing.com/img/home/old/in-10.jpg' },
-    { name: 'Construction', image: 'https://www.premierbearing.com/img/home/old/in-11.jpg' },
-    { name: 'Agriculture', image: 'https://www.premierbearing.com/img/home/old/in-12.jpg' },
-  ],
-};
+// const industrySolutions = {
+//   schaeffler: [
+//     {
+//       name: 'Mining and Processing',
+//       image: 'https://www.premierbearing.com/img/home/old/in-1.jpg',
+//     },
+//     { name: 'Wind Power', image: 'https://www.premierbearing.com/img/home/old/in-2.jpg' },
+//     { name: 'Railway', image: 'https://www.premierbearing.com/img/home/old/in-3.jpg' },
+//     { name: 'Automotive', image: 'https://www.premierbearing.com/img/home/old/in-4.jpg' },
+//     { name: 'Aerospace', image: 'https://www.premierbearing.com/img/home/old/in-5.jpg' },
+//     {
+//       name: 'Industrial Automation',
+//       image: 'https://www.premierbearing.com/img/home/old/in-6.jpg',
+//     },
+//   ],
+//   bonfiglioli: [
+//     { name: 'Food & Beverage', image: 'https://www.premierbearing.com/img/home/old/in-7.jpg' },
+//     { name: 'Intralogistics', image: 'https://www.premierbearing.com/img/home/old/in-8.jpg' },
+//     { name: 'Logistics', image: 'https://www.premierbearing.com/img/home/old/in-9.jpg' },
+//     { name: 'Renewable Energy', image: 'https://www.premierbearing.com/img/home/old/in-10.jpg' },
+//     { name: 'Construction', image: 'https://www.premierbearing.com/img/home/old/in-11.jpg' },
+//     { name: 'Agriculture', image: 'https://www.premierbearing.com/img/home/old/in-12.jpg' },
+//   ],
+// };
 
 // const clientLogos = [
 //   'https://img.logoipsum.com/332.svg',
@@ -133,24 +134,24 @@ function ProductCarousel({
   items,
   title,
   className,
+  imageSrc,
 }: {
   items: { name: string; image: string }[];
   title: string;
   className?: string;
+  imageSrc: string;
 }) {
   return (
     <section className={cn('py-16 bg-gray-50', className)}>
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="md:text-4xl text-3xl font-extrabold mb-4 text-center"
-          initial="hidden"
-          viewport={{ once: true }}
-          whileInView="visible"
-          variants={fadeInUp}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-        >
-          {title}
-        </motion.h2>
+      <div className="overflow-x-clip">
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={1920}
+          height={475}
+          className="w-full h-auto sm:mb-8 mb-24 select-none rounded-lg sm:scale-100 scale-[175%] overflow-x-clip"
+          draggable={false}
+        />
         <Carousel
           plugins={[
             Autoplay({
@@ -161,7 +162,7 @@ function ProductCarousel({
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-7xl mx-auto"
+          className="w-full max-w-7xl mx-auto lg:px-8 px-6"
         >
           <CarouselContent>
             {items.map((item, index) => (
@@ -240,7 +241,7 @@ function HeroCarousel() {
               <img
                 src={slide.image}
                 alt={`Hero Slide ${index + 1}`}
-                className="w-full h-full object-cover aspect-[16/7]"
+                className="w-full h-full object-cover aspect-[16/7] object-top"
               />
               <div className="absolute inset-0 flex items-end justify-start bg-gradient-to-b from-transparent to-primary to-90% lg:px-24 px-16 ">
                 <motion.h1
@@ -338,16 +339,23 @@ export function LandingPage() {
           className="bg-primary/[0.03]"
           items={products.schaeffler}
           title="Schaeffler Products"
+          imageSrc="/schaeffler.png"
         />
-        <ProductCarousel items={products.bonfiglioli} title="NBC Products" />
+        <ProductCarousel
+          className="bg-primary/[0.03]"
+          items={products.bonfiglioli}
+          title="NBC Products"
+          imageSrc="/nbc.png"
+        />
         <ProductCarousel
           className="bg-primary/[0.03]"
           items={products.dodge}
           title="RMP Products"
+          imageSrc="/rmp.png"
         />
 
         {/* Industry Solutions Sections */}
-        <ProductCarousel
+        {/* <ProductCarousel
           items={industrySolutions.schaeffler}
           title="Schaeffler Industry Solutions"
         />
@@ -355,21 +363,19 @@ export function LandingPage() {
           items={industrySolutions.bonfiglioli}
           className="bg-primary/[0.03]"
           title="Bonfiglioli Industry Solutions"
-        />
+        /> */}
 
         {/* Corporate Video Section */}
         <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              className="md:text-4xl text-3xl font-extrabold text-center mb-8"
-              initial="hidden"
-              viewport={{ once: true }}
-              whileInView="visible"
-              variants={fadeInUp}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              Corporate Video
-            </motion.h2>
+          <div className="overflow-x-clip">
+            <Image
+              src="/corporate video.png"
+              alt="Corporate Video"
+              width={1920}
+              height={475}
+              className="w-full h-auto sm:mb-8 mb-24 select-none rounded-lg sm:scale-100 scale-[200%] overflow-x-clip"
+              draggable={false}
+            />
             <motion.iframe
               initial="hidden"
               viewport={{ once: true }}
@@ -387,17 +393,15 @@ export function LandingPage() {
 
         {/* Testimonials Section */}
         <section className="py-16 bg-primary/[0.03]">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              className="md:text-4xl text-3xl font-extrabold mb-8 text-center"
-              initial="hidden"
-              viewport={{ once: true }}
-              whileInView="visible"
-              variants={fadeInUp}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              Testimonials
-            </motion.h2>
+          <div className="overflow-x-clip">
+            <Image
+              src="/testimonials.png"
+              alt="Testimonials"
+              width={1920}
+              height={475}
+              className="w-full h-auto sm:mb-8 mb-24 select-none rounded-lg sm:scale-100 scale-[200%] overflow-x-clip"
+              draggable={false}
+            />
             <TestimonialCarousel />
           </div>
         </section>

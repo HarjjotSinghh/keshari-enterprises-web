@@ -12,7 +12,7 @@ const fadeInUp = {
 export function AboutUsPreview() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.div
           className="flex flex-col md:flex-row items-center"
           initial="hidden"

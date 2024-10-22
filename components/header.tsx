@@ -93,7 +93,7 @@ export default function Header() {
   return (
     <header className="bg-background/90 backdrop-blur-sm shadow-md sticky top-0 z-50">
       <motion.div
-        className="container mx-auto px-4 py-4 flex justify-between items-center"
+        className="container mx-auto lg:px-8 px-6 py-4 flex justify-between items-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

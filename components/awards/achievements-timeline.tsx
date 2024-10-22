@@ -13,7 +13,7 @@ const achievements = [
 export function AchievementsTimeline() {
   return (
     <section className="py-16 bg-primary/[0.03]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <h2 className="text-3xl font-extrabold mb-8 text-center">Our Journey of Achievements</h2>
         <div className="max-w-3xl mx-auto">
           {achievements.map((achievement, index) => (

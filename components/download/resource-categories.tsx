@@ -13,7 +13,7 @@ const categories = [
 export function ResourceCategories() {
   return (
     <section className="py-16 bg-primary/[0.03]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-8 px-6">
         <motion.h2
           className="text-3xl font-extrabold mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export function ResourceCategories() {
           {categories.map((category, index) => (
             <motion.button
               key={index}
-              className="bg-white px-4 py-2 rounded-md shadow hover:shadow-md transition-shadow"
+              className="bg-white lg:px-8 px-6 py-2 rounded-md shadow hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut', delay: index * 0.2 }}

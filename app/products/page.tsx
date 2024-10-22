@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const bearings = [
   {
     name: 'Ball Bearings',
@@ -49,15 +51,15 @@ const associatedProducts = [
   },
 ];
 
-const refurbishmentProcess = [
-  { name: 'Thorough Inspections', description: 'Identifying wear and tear, corrosion, or damage.' },
-  { name: 'Precision Repairs', description: 'Restoring bearings to their optimal condition.' },
-  { name: 'Advanced Diagnostics', description: 'Ensuring long-term reliability and performance.' },
-  {
-    name: 'Complete Overhauls',
-    description: 'Rejuvenating bearings to meet or exceed original specifications.',
-  },
-];
+// const refurbishmentProcess = [
+//   { name: 'Thorough Inspections', description: 'Identifying wear and tear, corrosion, or damage.' },
+//   { name: 'Precision Repairs', description: 'Restoring bearings to their optimal condition.' },
+//   { name: 'Advanced Diagnostics', description: 'Ensuring long-term reliability and performance.' },
+//   {
+//     name: 'Complete Overhauls',
+//     description: 'Rejuvenating bearings to meet or exceed original specifications.',
+//   },
+// ];
 
 function ProductCard({ name, description }: { name: string; description: string }) {
   return (
@@ -70,15 +72,17 @@ function ProductCard({ name, description }: { name: string; description: string 
 
 export default function ProductsPage() {
   return (
-    <main className="pb-16 px-4 max-w-4xl mx-auto">
-      <h1 className="md:text-5xl text-4xl font-extrabold text-center pt-20 pb-8">
-        Products & Solutions
-      </h1>
+    <main className="pb-16 overflow-x-clip">
+      <Image
+        src="/products.png"
+        alt="Keshari Enterprises Products"
+        width={1920}
+        height={475}
+        className="w-full h-auto sm:mb-8 mb-16 select-none sm:scale-100 scale-[115%] overflow-x-clip"
+        draggable={false}
+      />
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4">
-          Precision in Motion – The Right Bearings for Every Application
-        </h2>
+      <section className="mb-12 px-4 max-w-4xl mx-auto">
         <p className="mb-4">
           Imagine a world where every machine runs like clockwork – that&apos;s the world we build
           at Keshari Enterprises. We offer an extensive range of bearings and associated products
@@ -107,7 +111,7 @@ export default function ProductsPage() {
         </p>
       </section>
 
-      <section>
+      {/* <section>
         <h2 className="text-3xl font-bold mb-4">Bearing Refurbishments</h2>
         <h3 className="text-2xl font-semibold mb-2">
           Renew, Reuse, Revive – Expert Bearing Refurbishment Services
@@ -131,7 +135,7 @@ export default function ProductsPage() {
           support your every move. Breathe new life into your bearings – reduce downtime, minimize
           costs, and enhance efficiency.
         </p>
-      </section>
+      </section> */}
     </main>
   );
 }

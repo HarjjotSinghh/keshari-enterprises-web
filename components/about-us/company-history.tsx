@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -10,18 +11,16 @@ const fadeInUp = {
 export function CompanyHistory() {
   return (
     <section className="py-16 bg-primary/[0.03]">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="text-3xl font-bold mb-8 text-center"
-          initial="hidden"
-          viewport={{ once: true }}
-          whileInView="visible"
-          variants={fadeInUp}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-        >
-          Your Partner in Every Revolution – Since 1988
-        </motion.h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div className="overflow-x-clip">
+        <Image
+          src="/about.png"
+          alt="Keshari Enterprises History"
+          width={1920}
+          height={475}
+          className="w-full h-auto mb-8 select-none rounded-lg sm:scale-100 scale-[170%] overflow-x-clip"
+          draggable={false}
+        />
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 container mx-auto lg:px-8 px-6">
           <motion.div
             className="mb-8 md:mb-0"
             initial="hidden"
