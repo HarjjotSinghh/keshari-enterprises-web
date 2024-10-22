@@ -61,12 +61,12 @@ export function WelcomeSection() {
             alt="Welcome to Keshari Enterprises"
             width={1920}
             height={475}
-            className="w-full h-auto mb-8 select-none rounded-lg sm:scale-100 scale-[170%] overflow-x-clip"
+            className="w-full h-auto mb-8 select-none rounded-lg sm:scale-100 scale-[115%] overflow-x-clip"
             draggable={false}
           />
           <div className="mx-auto lg:px-8 px-6 max-w-7xl">
             <motion.p
-              className="mb-4 max-w-3xl mx-auto text-center text-lg"
+              className="mb-4 max-w-3xl mx-auto text-center lg:text-lg text-base"
               initial="hidden"
               whileInView="visible"
               variants={fadeInUp}
@@ -79,7 +79,7 @@ export function WelcomeSection() {
               movement, ensuring that every component turns with precision and reliability.
             </motion.p>
             <motion.p
-              className="max-w-3xl mx-auto text-center text-lg"
+              className="max-w-3xl mx-auto text-center lg:text-lg text-base"
               initial="hidden"
               whileInView="visible"
               variants={fadeInUp}
