@@ -29,6 +29,15 @@ const locations = [
     mapEmbedUrl:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.1812836849363!2d71.0076!3d22.2756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce5cf5f5e4a1%3A0x7c3aa6d94f2f96ae!2sKeshari%20Enterprises!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin',
   },
+  {
+    city: 'Mumbai',
+    address:
+      'Room No. 18C, Luxmi Building, 3rd Floor, 126/128, Nagdcvi Street, Masjid Bundar (E), Mumbai, Pin-400003',
+    phone: '022-40030230',
+    email: 'mumbai@kesharienterprises.com',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.1812836849363!2d71.0076!3d22.2756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0ce5cf5f5e4a1%3A0x7c3aa6d94f2f96ae!2sKeshari%20Enterprises!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin',
+  },
 ];
 
 export function LocationList() {
@@ -48,7 +57,7 @@ export function LocationList() {
         >
           Our Branch Locations
         </motion.h2>
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
           {locations.map((location, index) => (
             <motion.div
               key={index}
@@ -73,17 +82,21 @@ export function LocationList() {
                   <a href={`tel:${location.phone}`} className="mb-2">
                     Phone: {location.phone}
                   </a>
-                  <a href={`mailto:${location.email}`}>Email: {location.email}</a>
-                  <div className="aspect-w-16 aspect-h-9 mt-4">
-                    <iframe
-                      src={location.mapEmbedUrl}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
-                  </div>
+                  {location.email && (
+                    <a href={`mailto:${location.email}`}>Email: {location.email}</a>
+                  )}
+                  {location.mapEmbedUrl && (
+                    <div className="aspect-w-16 aspect-h-9 mt-4">
+                      <iframe
+                        src={location.mapEmbedUrl}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                      ></iframe>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
