@@ -27,7 +27,7 @@ export function ResourceCategories() {
           {categories.map((category, index) => (
             <motion.button
               key={index}
-              className="bg-white lg:px-8 px-6 py-2 rounded-md shadow hover:shadow-md transition-shadow"
+              className="bg-card lg:px-8 px-6 py-2 rounded-md shadow hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut', delay: index * 0.2 }}

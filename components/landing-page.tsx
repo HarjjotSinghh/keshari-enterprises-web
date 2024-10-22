@@ -142,7 +142,7 @@ function ProductCarousel({
   imageSrc: string;
 }) {
   return (
-    <section className={cn('py-16 bg-gray-50', className)}>
+    <section className={cn('py-16 bg-foreground/[0.02]', className)}>
       <div className="overflow-x-clip">
         <Image
           src={imageSrc}
@@ -366,7 +366,7 @@ export function LandingPage() {
         /> */}
 
         {/* Corporate Video Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-foreground/[0.02]">
           <div className="overflow-x-clip">
             <Image
               src="/corporate video.png"

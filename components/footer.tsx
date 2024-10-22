@@ -118,7 +118,7 @@ export default function Footer() {
             alt="Certified by Schaeffler"
             width={240}
             height={80}
-            className="bg-white p-2"
+            className="bg-card p-2"
           /> */}
         </div>
       </div>

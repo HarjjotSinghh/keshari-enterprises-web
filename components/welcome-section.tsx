@@ -1,7 +1,7 @@
 'use client';
 
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Newspaper, Wand2 } from 'lucide-react';
+import { MapPin, Newspaper } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -89,8 +89,8 @@ export function WelcomeSection() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto lg:px-8 px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* <motion.div
             className="cursor-pointer hover:shadow-lg transition-shadow"
             initial="hidden"
             whileInView="visible"
@@ -113,7 +113,7 @@ export function WelcomeSection() {
                 <p className="text-sm text-gray-600">Find the perfect bearing for your needs</p>
               </CardContent>
             </Card>
-          </motion.div>
+          </motion.div> */}
           <Link href="/locations">
             <motion.div
               className="cursor-pointer hover:shadow-lg transition-shadow"
@@ -135,7 +135,7 @@ export function WelcomeSection() {
                     alt="Locations Map"
                     className="w-full h-52 select-none object-cover mb-4 rounded"
                   />
-                  <p className="text-sm text-gray-600">Find Keshari Enterprises near you</p>
+                  <p className="text-sm text-foreground/[0.7]">Find Keshari Enterprises near you</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -185,7 +185,7 @@ export function WelcomeSection() {
                   <CarouselPrevious className="absolute top-1/2 left-4 transform -translate-y-1/2" />
                   <CarouselNext className="absolute top-1/2 right-4 transform -translate-y-1/2" />
                 </Carousel>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-foreground/[0.7]">
                   Stay updated with our latest news and events
                 </p>
               </CardContent>
@@ -194,7 +194,7 @@ export function WelcomeSection() {
         </div>
       </div>
       <motion.div
-        className="bg-gray-100 py-12"
+        className="bg-foreground/[0.02] pb-12"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
@@ -214,7 +214,7 @@ export function WelcomeSection() {
             {reasons.map((reason, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-card p-6 rounded-lg shadow-md"
                 variants={fadeInUp}
                 transition={{ duration: 0.5, delay: 0.7 * index }}
               >
@@ -233,7 +233,7 @@ export function WelcomeSection() {
         </div>
       </motion.div>
       <motion.div
-        className="mt-8 text-center mb-16 overflow-x-clip"
+        className=" text-center overflow-x-clip"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
