@@ -58,7 +58,9 @@ const config: Config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'anek-odia': ['var(--font-anek-odia)']
+				'anek-odia': ['var(--font-anek-odia)'],
+				'holen-vintage': ['Holen Vintage'],
+				'tommy-soft': ['Tommy Soft']
 			},
 			keyframes: {
 				'accordion-down': {

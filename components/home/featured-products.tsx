@@ -40,7 +40,7 @@ export function FeaturedProducts() {
               viewport={{ once: true }}
             >
               <Link href="/products">
-                <Card className="hover:shadow-lg transition-shadow">
+                <Card className=" transition-shadow">
                   <CardHeader>
                     <CardTitle>{product.name}</CardTitle>
                   </CardHeader>

@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../components/ui/carousel';
-import { ChevronRightCircle } from 'lucide-react';
+import { ChevronRightCircle, MapPin, Newspaper } from 'lucide-react';
 import { WelcomeSection } from './welcome-section';
 import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay';
@@ -353,6 +353,113 @@ export function LandingPage() {
           title="RMP Products"
           imageSrc="/rmp.png"
         />
+        <div className="max-w-7xl mx-auto lg:px-8 px-6 py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* <motion.div
+            className="cursor-pointer hover:shadow-lg transition-shadow"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+          >
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Wand2 className="w-6 h-6 mr-2 text-primary" />
+                  <h3 className="lg:text-xl text-lg font-semibold">Bearing Selection Wizard</h3>
+                </div>
+                <img
+                  draggable={false}
+                  src="https://bearingwizard.com/wp-content/uploads/sites/2/gestaltung-lagerung.jpg"
+                  alt="Bearing Selection Wizard"
+                  className="w-full h-52 select-none object-cover mb-4 rounded"
+                />
+                <p className="text-sm text-gray-600">Find the perfect bearing for your needs</p>
+              </CardContent>
+            </Card>
+          </motion.div> */}
+            <Link href="/locations">
+              <motion.div
+                className="cursor-pointer transition-shadow"
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeInUp}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
+              >
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <MapPin className="w-6 h-6 mr-2 text-primary" />
+                      <h3 className="lg:text-xl text-lg font-semibold">Locations</h3>
+                    </div>
+                    <img
+                      draggable={false}
+                      src="https://www.infront.com/wp-content/uploads/2019/10/ranking-for-multiple-locations-1.jpg"
+                      alt="Locations Map"
+                      className="w-full h-52 select-none object-cover mb-4 rounded"
+                    />
+                    <p className="text-sm text-foreground/[0.7]">
+                      Find Keshari Enterprises near you
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Link>
+
+            <motion.div
+              className="cursor-pointer transition-shadow"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}
+            >
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Newspaper className="w-6 h-6 mr-2 text-primary" />
+                    <h3 className="lg:text-xl text-lg font-semibold">News & Events</h3>
+                  </div>
+                  <Carousel
+                    opts={{
+                      align: 'center',
+                      loop: true,
+                    }}
+                    plugins={[
+                      Autoplay({
+                        delay: 3000,
+                      }),
+                    ]}
+                  >
+                    <CarouselContent>
+                      {Array.from({ length: 4 }).map((_, index) => (
+                        <CarouselItem key={index}>
+                          <img
+                            draggable={false}
+                            src={
+                              index % 2 === 0
+                                ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG33xrttLSjtADIUZOsavhbTS8170G5T3dVA&s'
+                                : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKZBgQRasUMTYTeVcvVWVVeNm-vFxSBddaQg&s'
+                            }
+                            alt="News 1"
+                            className="w-full h-52 select-none object-cover mb-4 rounded"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute top-1/2 left-4 transform -translate-y-1/2" />
+                    <CarouselNext className="absolute top-1/2 right-4 transform -translate-y-1/2" />
+                  </Carousel>
+                  <p className="text-sm text-foreground/[0.7]">
+                    Stay updated with our latest news and events
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Industry Solutions Sections */}
         {/* <ProductCarousel
@@ -366,16 +473,16 @@ export function LandingPage() {
         /> */}
 
         {/* Corporate Video Section */}
-        <section className="py-16 bg-foreground/[0.02]">
+        <section className="pt-20 bg-foreground/[0.02]">
           <div className="overflow-x-clip">
-            <Image
+            {/* <Image
               src="/corporate video.png"
               alt="Corporate Video"
               width={1920}
               height={475}
               className="w-full h-auto sm:mb-8 mb-24 select-none rounded-lg sm:scale-100 scale-[200%] overflow-x-clip"
               draggable={false}
-            />
+            /> */}
             <motion.iframe
               initial="hidden"
               viewport={{ once: true }}
@@ -392,7 +499,7 @@ export function LandingPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 bg-primary/[0.03]">
+        <section className="py-20 bg-primary/[0.03]">
           <div className="overflow-x-clip">
             <Image
               src="/testimonials.png"

@@ -21,23 +21,6 @@ const menuItems = [
     href: '/',
   },
   {
-    name: 'Products And Solutions',
-    subItems: [
-      {
-        name: 'Schaeffler',
-        href: 'https://medias.schaeffler.co.in/',
-      },
-      {
-        name: 'NBC',
-        href: 'https://www.nbcbearings.com/',
-      },
-      {
-        name: 'RMP',
-        href: 'https://rmpbearings.com/',
-      },
-    ],
-  },
-  {
     name: 'About Us',
     subItems: [
       {
@@ -54,9 +37,27 @@ const menuItems = [
     ],
   },
   {
-    name: 'Bearing Refurbishment',
-    href: '/bearing-refurbishment',
+    name: 'Products And Solutions',
+    subItems: [
+      {
+        name: 'Schaeffler',
+        href: 'https://medias.schaeffler.co.in/',
+      },
+      {
+        name: 'NBC',
+        href: 'https://www.nbcbearings.com/',
+      },
+      {
+        name: 'RMP',
+        href: 'https://rmpbearings.com/',
+      },
+    ],
   },
+
+  // {
+  //   name: 'Bearing Refurbishment',
+  //   href: '/bearing-refurbishment',
+  // },
   {
     name: 'Locations',
     href: '/locations',
@@ -73,10 +74,10 @@ const menuItems = [
     name: 'Enquiry',
     href: '/enquiry',
   },
-  {
-    name: 'Career',
-    href: '/career',
-  },
+  // {
+  //   name: 'Career',
+  //   href: '/career',
+  // },
   {
     name: 'Contact Us',
     href: '/contact',
@@ -101,7 +102,9 @@ export default function Header() {
       >
         <Link href="/" className="flex flex-row items-center justify-center gap-2">
           <img src="/logo.png" alt="Keshari Enterprises Logo" className="h-16" />
-          <h2 className="md:text-xl font-semibold text-xl ">Keshari Enterprises</h2>
+          <h2 className="md:text-xl font-semibold text-xl font-holen-vintage">
+            Keshari Enterprises
+          </h2>
         </Link>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -126,7 +129,9 @@ export default function Header() {
                     height={64}
                     className="h-16 w-auto"
                   />
-                  <h2 className="md:text-xl font-semibold text-base">Keshari Enterprises</h2>
+                  <h2 className="md:text-xl font-semibold text-base font-holen-vintage">
+                    Keshari Enterprises
+                  </h2>
                 </motion.div>
               </SheetTitle>
               <SheetDescription>
@@ -142,7 +147,7 @@ export default function Header() {
                       <AccordionItem value={`item-${index}`}>
                         {item.subItems ? (
                           <>
-                            <AccordionTrigger>{item.name}</AccordionTrigger>
+                            <AccordionTrigger className="font-normal">{item.name}</AccordionTrigger>
                             <AccordionContent>
                               <div className="flex flex-col space-y-2 pl-4">
                                 {item.subItems.map((subItem, subIndex) => (

@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anekOdia.variable} antialiased font-anek-odia`}>
+      <body className={`${anekOdia.variable} antialiased font-tommy-soft`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
